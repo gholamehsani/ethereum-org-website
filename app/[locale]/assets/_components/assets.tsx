@@ -1,52 +1,8 @@
 "use client"
-
-import { HTMLAttributes } from "react"
-
-import type { ChildOnlyProp } from "@/lib/types"
-
-import AssetDownload from "@/components/AssetDownload"
-import FeedbackCard from "@/components/FeedbackCard"
-import { Image } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
-import { Center, Flex } from "@/components/ui/flex"
-import InlineLink from "@/components/ui/Link"
-
-// import efLogo from "@/public/images/ef-logo.png"
-// import efLogoWhite from "@/public/images/ef-logo-white.png"
-// import ethDiamondBlackHero from "@/public/images/assets/eth-diamond-black.png"
-// import ethDiamondPurpleHero from "@/public/images/assets/eth-diamond-purple.png"
-// import ethGifCat from "@/public/images/eth-gif-cat.png"
-// import ethGifChalk from "@/public/images/eth-gif-chalk.png"
-// import ethGifSun from "@/public/images/eth-gif-sun.png"
-// import ethGifWaves from "@/public/images/eth-gif-waves.png"
-// import ethPortraitPurpleWhite from "@/public/images/assets/ethereum-logo-portrait-purple-white.png"
-// import leslieTheRhino from "@/public/images/upgrades/upgrade_rhino.png"
-import useColorModeValue from "@/hooks/useColorModeValue"
-import { useTranslation } from "@/hooks/useTranslation"
-import ethDiamondBlack from "@/public/images/assets/eth-diamond-black.png"
-import ethDiamondBlackGray from "@/public/images/assets/eth-diamond-black-gray.png"
-import ethDiamondBlackWhite from "@/public/images/assets/eth-diamond-black-white.jpg"
-import ethDiamondGlyph from "@/public/images/assets/eth-diamond-glyph.png"
-import ethDiamondPurple from "@/public/images/assets/eth-diamond-purple.png"
-import ethDiamondPurplePurple from "@/public/images/assets/eth-diamond-purple-purple.png"
-import ethDiamondPurpleWhite from "@/public/images/assets/eth-diamond-purple-white.jpg"
-import ethDiamondColor from "@/public/images/assets/eth-diamond-rainbow.png"
-import ethGlyphColored from "@/public/images/assets/eth-glyph-colored.png"
-import ethLandscapeBlack from "@/public/images/assets/ethereum-logo-landscape-black.png"
-import ethLandscapeBlackGray from "@/public/images/assets/ethereum-logo-landscape-black-gray.png"
-import ethLandscapePurple from "@/public/images/assets/ethereum-logo-landscape-purple.png"
-import ethLandscapePurplePurple from "@/public/images/assets/ethereum-logo-landscape-purple-purple.png"
-import ethLandscapePurpleWhite from "@/public/images/assets/ethereum-logo-landscape-purple-white.png"
-import ethPortraitBlack from "@/public/images/assets/ethereum-logo-portrait-black.png"
-import ethPortraitBlackGray from "@/public/images/assets/ethereum-logo-portrait-black-gray.png"
+"
+// import ethGifSun from  from  from "@/public/images/assets/ethereum-logo-portrait-black-gray.png"
 import ethPortraitPurple from "@/public/images/assets/ethereum-logo-portrait-purple.png"
-import ethPortraitPurplePurple from "@/public/images/assets/ethereum-logo-portrait-purple-purple.png"
-import ethWordmarkBlack from "@/public/images/assets/ethereum-wordmark-black.png"
-import ethWordmarkBlackGray from "@/public/images/assets/ethereum-wordmark-black-gray.png"
-import ethWordmarkPurple from "@/public/images/assets/ethereum-wordmark-purple.png"
-import ethWordmarkPurplePurple from "@/public/images/assets/ethereum-wordmark-purple-purple.png"
-import ethWordmarkPurpleWhite from "@/public/images/assets/ethereum-wordmark-purple-white.png"
-import developers from "@/public/images/developers-eth-blocks.png"
+import ethPortraitPurplePurple from 
 import doge from "@/public/images/doge-computer.png"
 import enterprise from "@/public/images/enterprise-eth.png"
 import eth from "@/public/images/eth.png"
@@ -55,57 +11,13 @@ import future from "@/public/images/future_transparent.png"
 import hackathon from "@/public/images/hackathon_transparent.png"
 import communityHero from "@/public/images/heroes/community-hero.png"
 import developersHero from "@/public/images/heroes/developers-hub-hero.jpg"
-import garden from "@/public/images/heroes/garden.jpg"
-import guidesHero from "@/public/images/heroes/guides-hub-hero.jpg"
-import layer2Hero from "@/public/images/heroes/layer-2-hub-hero.jpg"
-import learnHero from "@/public/images/heroes/learn-hub-hero.png"
-import quizzesHub from "@/public/images/heroes/quizzes-hub-hero.png"
-import roadmapHero from "@/public/images/heroes/roadmap-hub-hero.jpg"
-import hero from "@/public/images/home/hero.png"
-import heroPanda from "@/public/images/home/hero-panda.png"
+
 import mergePanda from "@/public/images/home/merge-panda.png"
-import impact from "@/public/images/impact_transparent.png"
-import infrastructure from "@/public/images/infrastructure_transparent.png"
-import beaconChain from "@/public/images/upgrades/core.png"
-import merge from "@/public/images/upgrades/merge.png"
-import newRings from "@/public/images/upgrades/newrings.png"
-import oldShip from "@/public/images/upgrades/oldship.png"
-import dao from "@/public/images/use-cases/dao-2.png"
-import defi from "@/public/images/use-cases/defi.png"
-import wallet from "@/public/images/wallet.png"
-import whatIsEthereum from "@/public/images/what-is-ethereum.png"
-
-const Row = (props: ChildOnlyProp) => (
-  <div
-    className="-mx-4 mb-8 grid grid-cols-[repeat(auto-fit,minmax(min(288px,100%),1fr))]"
-    {...props}
-  />
-)
-
+import impact from 
 const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <h2 className="mb-6 mt-16 scroll-mt-24 leading-xs" {...props} />
 )
 
-const H3 = (props: ChildOnlyProp) => (
-  <h3 className="mb-0 mt-10 leading-xs" {...props} />
-)
-
-const AssetsPage = () => {
-  // Ignore locale in the URL for SVG path in public directory to fix broken link
-  // SVG path changes from /en/images => /images
-  const svgPathFromOrigin = ""
-
-  const { t } = useTranslation("page-assets")
-  const assetPageHeroImage = useColorModeValue(
-    ethDiamondBlack,
-    ethDiamondPurple
-  )
-  return (
-    <Flex className="w-full flex-col">
-      <MainArticle className="px-8 py-4">
-        <Flex className="flex-col px-8 py-4">
-          <Center>
-            <Image
               className="w-20"
               src={assetPageHeroImage}
               alt={t("page-assets-eth-diamond-gray")}
