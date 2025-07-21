@@ -1,52 +1,6 @@
 import { Suspense } from "react"
-import { pick } from "lodash"
-import dynamic from "next/dynamic"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
 
-import type { Lang } from "@/lib/types"
-
-import Emoji from "@/components/Emoji"
-import I18nProvider from "@/components/I18nProvider"
-import { Image } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
-import Translation from "@/components/Translation"
-import { ButtonLink } from "@/components/ui/buttons/Button"
-import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
-import { Skeleton } from "@/components/ui/skeleton"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-
-import { cn } from "@/lib/utils/cn"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
-import { getMetadata } from "@/lib/utils/metadata"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import { BASE_TIME_UNIT } from "@/lib/constants"
-
-import AdoptionSwiper from "./_components/AdoptionSwiper"
-import CountDown from "./_components/CountDown"
-import { adoptionCards, adoptionStyles } from "./_components/data"
-import InnovationSwiper from "./_components/InnovationSwiper"
-import Stories from "./_components/Stories"
-import TenYearHero from "./_components/TenYearHero"
-import { getTimeUnitTranslations, parseStoryDates } from "./_components/utils"
-
-import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
-import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
-import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
-
-const TenYearGlobe = dynamic(() => import("./_components/TenYearGlobe"), {
-  ssr: false,
-})
-
-// In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 1
-
-const loadData = dataLoader(
-  [
+import CountDown from "./_components
     ["fetched10YearEvents", fetch10YearEvents],
     ["fetched10YearStories", fetch10YearStories],
   ],
