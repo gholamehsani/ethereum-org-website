@@ -1,53 +1,9 @@
 "use client"
 
 import { HTMLAttributes } from "react"
-
-import type { ChildOnlyProp, PageWithContributorsProps } from "@/lib/types"
-
-/* Uncomment for Bug Bounty Banner: */
-import BugBountyBanner from "@/components/Banners/BugBountyBanner"
-import Breadcrumbs from "@/components/Breadcrumbs"
-import BugBountyCards from "@/components/BugBountyCards"
-import Card from "@/components/Card"
-import CardList from "@/components/CardList"
-import Emoji from "@/components/Emoji"
-import ExpandableCard from "@/components/ExpandableCard"
-import FeedbackCard from "@/components/FeedbackCard"
-import FileContributors from "@/components/FileContributors"
-import { Image, type ImageProps } from "@/components/Image"
-import Leaderboard from "@/components/Leaderboard"
-import MainArticle from "@/components/MainArticle"
-import Translation from "@/components/Translation"
-import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Divider } from "@/components/ui/divider"
-import { Center, Flex, VStack } from "@/components/ui/flex"
-import InlineLink from "@/components/ui/Link"
-import { ListItem, UnorderedList } from "@/components/ui/list"
-
-import { cn } from "@/lib/utils/cn"
-
-import consensusData from "@/data/consensus-bounty-hunters.json"
-import executionData from "@/data/execution-bounty-hunters.json"
-
-import useColorModeValue from "@/hooks/useColorModeValue"
-import { useTranslation } from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
-import besu from "@/public/images/upgrades/besu.png"
-import erigon from "@/public/images/upgrades/erigon.png"
-import geth from "@/public/images/upgrades/geth.png"
-import grandine from "@/public/images/upgrades/grandine.png"
+ "@/public/images/upgrades/grandine.png"
 import lighthouseDark from "@/public/images/upgrades/lighthouse-dark.png"
-import lighthouseLight from "@/public/images/upgrades/lighthouse-light.png"
-import lodestar from "@/public/images/upgrades/lodestar.png"
-import nethermind from "@/public/images/upgrades/nethermind.png"
-import nimbus from "@/public/images/upgrades/nimbus-cloud.png"
-import prysm from "@/public/images/upgrades/prysm.png"
-import reth from "@/public/images/upgrades/reth.png"
-import solidityDark from "@/public/images/upgrades/solidity-dark.png"
-import solidityLight from "@/public/images/upgrades/solidity-light.png"
-import tekuDark from "@/public/images/upgrades/teku-dark.png"
-import tekuLight from "@/public/images/upgrades/teku-light.png"
-import vyper from "@/public/images/upgrades/vyper.png"
+import lighthouseLight from  "@/public/images/upgrades/vyper.png"
 
 const Page = (props: ChildOnlyProp) => (
   <MainArticle
@@ -57,49 +13,7 @@ const Page = (props: ChildOnlyProp) => (
 )
 
 const Content = (props: ChildOnlyProp) => (
-  <div className="w-full px-8 py-4" {...props} />
-)
-
-const Title = (props: ChildOnlyProp) => (
-  <Text className="mb-0 ms-2 text-sm uppercase text-body" {...props} />
-)
-
-const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <h2 className="mb-8 mt-12 text-center tracking-normal" {...props} />
-)
-
-const H4 = (props: ChildOnlyProp) => (
-  <h4 className="my-8 leading-xs" {...props} />
-)
-
-const Subtitle = (props: ChildOnlyProp) => (
-  <Text className="mt-4 max-w-[480px] leading-xs text-body-medium" {...props} />
-)
-
-const Text = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
-  <p className={cn("mb-6", className)} {...props} />
-)
-
-const SloganGradient = ({ children }: ChildOnlyProp) => (
-  <div
-    className="mt-4 max-w-[720px] overflow-auto bg-linear-bug-bounty-title bg-clip-text"
-    style={{ WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
-  >
-    <h1 className="mb-6 text-4xl font-bold lg:text-5xl">{children}</h1>
-  </div>
-)
-
-const Rules = (props: ChildOnlyProp) => (
-  <VStack className="mx-auto my-0 max-w-3xl" {...props} />
-)
-
-const SubmitInstructions = (props: ChildOnlyProp) => (
-  <div className="me-8 max-w-[100ch] flex-1 basis-[600px]" {...props} />
-)
-
-const GradientContainer = (props: ChildOnlyProp) => (
-  <div
-    className="mt-8 w-full border-t bg-banner-grid-gradient px-0 py-16 shadow-table-item-box"
+  <-0 py-16 shadow-table-item-box"
     {...props}
   />
 )
