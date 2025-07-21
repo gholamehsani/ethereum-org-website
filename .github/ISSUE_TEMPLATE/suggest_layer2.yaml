@@ -2,22 +2,7 @@ name: Suggest a Layer 2
 
   - 
     attributes:
-      label: Description
-      description: Please provide a 1-2 sentence (240 character max) of the layer 2 project
-    validations:
-      required: true
-  - type: input
-    id: layer_2_website
-    attributes:
-      label: Website
-      description: Please provide a URL tot he website for the layer 2 project
-    validations:
-      required: true
-  - type: input
-    id: layer_2_developer_documentation
-    attributes:
-      label: Developer documentation
-      description: Please provide a URL to the developer documentation for the layer 2 project
+      label:  the layer 2 project
     validations:
       required:  false
         - label: "No"
